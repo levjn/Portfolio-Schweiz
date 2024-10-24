@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.site-title {
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: black solid;
+}
+
+.red-font {
+    color: #FF0000;
+}
+
+main {
+    min-height: 100vh;
+}
