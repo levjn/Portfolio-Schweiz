@@ -12,3 +12,7 @@
 .swiper-pagination-total {
     color: #9CA3AF;
 }
+
+.geordnet_photo {
+    max-height: 200px;
+}

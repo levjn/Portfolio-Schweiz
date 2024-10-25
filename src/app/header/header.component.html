@@ -1,10 +1,17 @@
 <header class="shadow-xl">
-    <div class="flex items-center justify-self-center">
-        <div routerLink="/" class="flex items-center mr-[100px]">
+    <div class="flex items-center p-4 justify-center">
+        <div routerLink="/" class="flex items-center mr-16">
             <img class="mr-2.5" src="assets/photos/schweizer_flagge.png" alt="Schweizer Flagge" width="80px"/>
             <h1 class="text-5xl red-font">Switzerland</h1>
         </div>
-        <nav>
+        <div class="block lg:hidden">
+            <button (click)="toggleMenu()" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <nav class="hidden lg:flex">
             <ul class="flex text-xl red-font">
                 <li class="mr-5 transform transition-transform duration-150 hover:scale-110">
                     <a routerLink="/gallery">Gallery</a>
@@ -13,9 +20,27 @@
                     <a routerLink="/history">History</a>
                 </li>
                 <li class="mr-5 transform transition-transform duration-150 hover:scale-110">
-                    <a routerLink="/sightseeing">Sighsteeing</a>
+                    <a routerLink="/sightseeing">Sightseeing</a>
                 </li>
                 <li class="mr-5 transform transition-transform duration-150 hover:scale-110">
+                    <a routerLink="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div *ngIf="isMenuOpen" class="lg:hidden bg-white shadow-md">
+        <nav>
+            <ul class="flex flex-col text-xl red-font p-4">
+                <li class="mb-2 transform transition-transform duration-150 hover:scale-110">
+                    <a routerLink="/gallery">Gallery</a>
+                </li>
+                <li class="mb-2 transform transition-transform duration-150 hover:scale-110">
+                    <a routerLink="/history">History</a>
+                </li>
+                <li class="mb-2 transform transition-transform duration-150 hover:scale-110">
+                    <a routerLink="/sightseeing">Sightseeing</a>
+                </li>
+                <li class="mb-2 transform transition-transform duration-150 hover:scale-110">
                     <a routerLink="/contact">Contact Us</a>
                 </li>
             </ul>

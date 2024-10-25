@@ -1,7 +1,30 @@
-<div class="px-[200px]">
+<div class="lg:px-[200px] md:px-[100px] sm:px-[50px]">
     <p class="site-title">Gallery</p>
+
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-b pb-4 border-black">
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/1.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/2.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/4.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/5.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/6.jpg" alt="">
+        </div>
+    </div>
+
     <p-carousel
-        [value]="[]"
+        [value]="products"
         [numVisible]="3"
         [numScroll]="3"
         [circular]="true"
@@ -11,7 +34,7 @@
                 <div class="mb-3">
                     <div class="relative mx-auto">
                         <img
-                            src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"
+                            src="assets/photos/gallery/{{product.image}}"
                             [alt]="product.name"
                             class="w-full border-round" />
                     </div>
