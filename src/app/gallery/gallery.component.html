@@ -1,8 +1,7 @@
-<div class="lg:px-[200px] md:px-[100px] sm:px-[50px]">
-    <p class="site-title">Gallery</p>
+<div class="px-4 sm:px-[50px] md:px-[100px] lg:px-[200px]">
+    <p class="site-title text-center lg:text-left">Gallery</p>
 
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-b pb-4 border-black">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 border-b pb-4 border-black">
         <div>
             <img class="h-auto max-w-full rounded-lg geordnet_photo" src="assets/photos/gallery/geordnet/1.jpg" alt="">
         </div>
@@ -25,25 +24,25 @@
 
     <p-carousel
         [value]="products"
-        [numVisible]="3"
-        [numScroll]="3"
+        [numVisible]="1"
+        [numScroll]="1"
         [circular]="true"
-        autoplayInterval="3000">
+        autoplayInterval="3000"
+        class="my-6 sm:[numVisible]='2' md:[numVisible]='3' lg:[numVisible]='4'">
         <ng-template let-product pTemplate="item">
-            <div class="border-1 surface-border border-round m-2 p-3">
+            <div class="border border-gray-300 rounded-lg m-2 p-3">
                 <div class="mb-3">
                     <div class="relative mx-auto">
                         <img
                             src="assets/photos/gallery/{{product.image}}"
                             [alt]="product.name"
-                            class="w-full border-round" />
+                            class="w-full rounded-lg" />
                     </div>
                 </div>
-                <div class="mb-3 font-medium">
+                <div class="mb-3 font-medium text-center">
                     {{ product.name }}
                 </div>
             </div>
         </ng-template>
     </p-carousel>
 </div>
-
